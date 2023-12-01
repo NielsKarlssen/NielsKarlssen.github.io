@@ -5,7 +5,7 @@
 		<link rel="icon" href="./favicon.png" />
 		<meta name="viewport" content="width=device-width" />
 		<meta http-equiv="content-security-policy" content="">
-		<link href="./_app/immutable/assets/_page-e52d8411.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/_page-6ceb7ac5.css" rel="stylesheet">
 		<link rel="modulepreload" href="./_app/immutable/start-cd7e8da2.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/index-7441187f.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-1fab6688.js">
@@ -16,8 +16,7 @@
 		<link rel="modulepreload" href="./_app/immutable/components/pages/_layout.svelte-bad82aeb.js">
 		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-9cbb603b.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-da46b06b.js">
-		<link rel="modulepreload" href="./_app/immutable/components/pages/telltale/_page.svelte-6f214e8a.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index-a9b93569.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/register/_page.svelte-ce0013b1.js">
 	</head>
 	<body>
 		<div style="display: contents">
@@ -33,28 +32,47 @@
 
 <hr>
 
-<main class="svelte-1qejnfu"><div class="grid svelte-1qejnfu">
-    
-      <div class="container svelte-1qejnfu">
-        <img src="wave.jpeg" alt="The greatest story ever." class="svelte-1qejnfu">
-          
-          <p>The greatest story ever.</p>
-          <div class="row svelte-1qejnfu">
-            <button>Begin</button></div>
-          </div></div>
-</main>
+<p>Have an account? <a href="/login">Log in</a></p>
+
+<main><h1>Registration Form</h1></main>
 
 
-		<script type="module" data-sveltekit-hydrate="s7asog">
+
+
+
+
+
+
+<form class="svelte-17anw5a"><label for="firstName">First Name:</label>
+    <input id="firstName" type="text" value="">
+
+    <label for="lastname">Last Name:</label>
+    <input id="lastname" type="text" value="">
+
+    <label for="email">Email:</label>
+    <input id="email" type="email">
+
+    <label for="password">Password:</label>
+    <input id="password" type="password">
+
+    <label for="dateofbirth">Date of birth</label>
+    <input type="date">
+
+<button type="submit">Register</button>
+
+</form>
+
+
+		<script type="module" data-sveltekit-hydrate="v96c6y">
 			import { start } from "./_app/immutable/start-cd7e8da2.js";
 
 			start({
 				env: {},
 				paths: {"base":"","assets":""},
-				target: document.querySelector('[data-sveltekit-hydrate="s7asog"]').parentNode,
+				target: document.querySelector('[data-sveltekit-hydrate="v96c6y"]').parentNode,
 				version: "1701424855027",
 				hydrate: {
-					node_ids: [0, 16],
+					node_ids: [0, 12],
 					data: [null,null],
 					form: null
 				}
