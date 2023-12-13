@@ -9,6 +9,7 @@
   <a href="/telltale">Telltale</a>
   <a href="/photoapp">Photo App</a>
   <a href="/register">register</a>
+  <a href="/todo">To Do</a>
 
   <a
     target="_blank" rel="noreferrer"
