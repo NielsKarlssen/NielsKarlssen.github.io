@@ -1,42 +1,46 @@
 {
-	"name": "NamnsHemsida",
-	"version": "0.0.1",
-	"private": true,
-	"scripts": {
-		"dev": "vite dev",
-		"build": "vite build",
-		"preview": "vite preview"
-	},
-	"devDependencies": {
-		"@sveltejs/adapter-auto": "next",
-		"@sveltejs/adapter-static": "next",
-		"@sveltejs/kit": "next",
-		"autoprefixer": "^10.4.14",
-		"mdsvex": "^0.10.6",
-		"postcss": "^8.4.27",
-		"rehype-autolink-headings": "^6.1.1",
-		"rehype-format": "^4.0.1",
-		"rehype-slug": "^5.1.0",
-		"rehype-stringify": "^9.0.3",
-		"remark-abbr": "^1.4.1",
-		"remark-autolink-headings": "^7.0.1",
-		"remark-frontmatter": "^4.0.1",
-		"remark-github": "^11.2.4",
-		"remark-parse": "^10.0.1",
-		"remark-rehype": "^10.1.0",
-		"remark-sectionize": "^1.1.1",
-		"remark-slug": "^7.0.1",
-		"remark-toc": "^8.0.1",
-		"svelte": "^3.44.0",
-		"svelte-preprocess": "^4.10.7",
-		"tailwindcss": "^3.3.3"
-	},
-	"type": "module",
-	"dependencies": {
-		"@picocss/pico": "^1.5.6",
-		"elizabot": "^0.0.3",
-		"prism-themes": "^1.9.0",
-		"remark": "^14.0.2",
-		"svelte-french-toast": "^1.0.3"
-	}
+  "name": "NamnsHemsida",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@skeletonlabs/skeleton": "^2.8.0",
+    "@skeletonlabs/tw-plugin": "^0.3.1",
+    "@sveltejs/adapter-auto": "next",
+    "@sveltejs/adapter-static": "next",
+    "@sveltejs/kit": "next",
+    "autoprefixer": "^10.4.16",
+    "mdsvex": "^0.10.6",
+    "postcss": "^8.4.32",
+    "postcss-load-config": "^5.0.2",
+    "rehype-autolink-headings": "^6.1.1",
+    "rehype-format": "^4.0.1",
+    "rehype-slug": "^5.1.0",
+    "rehype-stringify": "^9.0.3",
+    "remark-abbr": "^1.4.1",
+    "remark-autolink-headings": "^7.0.1",
+    "remark-frontmatter": "^4.0.1",
+    "remark-github": "^11.2.4",
+    "remark-parse": "^10.0.1",
+    "remark-rehype": "^10.1.0",
+    "remark-sectionize": "^1.1.1",
+    "remark-slug": "^7.0.1",
+    "remark-toc": "^8.0.1",
+    "svelte": "^3.44.0",
+    "svelte-preprocess": "^4.10.7",
+    "tailwindcss": "^3.3.6"
+  },
+  "type": "module",
+  "dependencies": {
+    "@picocss/pico": "^1.5.11",
+    "elizabot": "^0.0.3",
+    "pico": "^0.1.17",
+    "prism-themes": "^1.9.0",
+    "remark": "^14.0.2",
+    "svelte-french-toast": "^1.0.3"
+  }
 }

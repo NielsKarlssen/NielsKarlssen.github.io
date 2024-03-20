@@ -1,9 +1,19 @@
 ---
 title: Projektstart
-date: "2024-02-21"
+date: "2024-02-02"
 keywords: ["planning"]
 ---
 
-Hello, I am _Post One._
+**Webshop**
 
-**Nice to meet you!**
+Hej
+
+
+<script>
+  import { CodeBlock } from '@skeletonlabs/skeleton';
+  </script>
+  
+  <div style=" margin:auto; width:70vw;">
+  <CodeBlock language="html" code={`<div>This is meta</div>`}>
+  </CodeBlock>
+  </div>

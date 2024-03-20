@@ -4,21 +4,22 @@
 		<meta charset="utf-8" />
 		<link rel="icon" href="./favicon.png" />
 		<meta name="viewport" content="width=device-width" />
-		<meta http-equiv="content-security-policy" content="">
-		<link rel="modulepreload" href="./_app/immutable/start-523bd60f.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index-7441187f.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-1fab6688.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index-018f3826.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/preload-helper-41c905a7.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/control-f5b05b5f.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/parse-f0c618df.js">
-		<link rel="modulepreload" href="./_app/immutable/components/pages/_layout.svelte-d5b30b99.js">
-		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-9cbb603b.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-da46b06b.js">
-		<link rel="modulepreload" href="./_app/immutable/components/pages/todo/_page.svelte-9f6b2783.js">
+		
+		<link href="./_app/immutable/assets/app.e661baf9.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.b242c843.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.d01e145f.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.9cc3ac79.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.1e9b6a47.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/parse.bee59afc.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/control.c2cf8273.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.3267c43d.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/preload-helper.a4192956.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.783b041a.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/22.1fed4690.js">
 	</head>
-	<body>
+	<body data-theme="skeleton">
 		<div style="display: contents">
+
 
 
 <nav><a href="/">Hem</a>
@@ -27,6 +28,15 @@
   <a href="/photoapp">Photo App</a>
   <a href="/register">register</a>
   <a href="/todo">To Do</a>
+  <a href="/pacman">Pac Man</a>
+  <a href="/chat">Chat App</a>
+  <a href="/search">search</a>
+  <a href="/scroll">scroll</a>
+  <a href="/blog">blog</a>
+  <a href="/week 1">week1</a>
+  <a href="/logoin">logoin</a>
+  <a href="/Gim">gim</a>
+  <a href="/webshop">webshop</a>
 
   <a target="_blank" rel="noreferrer" href="https://github.com/lisaviktorsson/lisaviktorsson.github.com">GitHub</a></nav>
 
@@ -35,164 +45,98 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TODO List</title>
-    <style>body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            display: auto;
-            justify-content: center;
-            align-items: auto;
-            height: 100vh;
-            background-image: url('https://www.cajp.se/pidd/content/images/org-burgare-ost-avokado.jpg');
-            background-size: cover;
-            background-position: center;
-        }
+    <title>Task List</title></head>
+<body><h2>Task List</h2>
 
-        .container {
-            width: 80vw;
-            height: 70vh;
-            background-color: lightgray;
-            border: 10px solid darkgray;
-            border-radius: 10px;
-            padding-top: 10px;
-            margin: auto;
-        }
+    <ul id="taskList"></ul>
 
-        .layout {
-            display: grid;
-            width: 100%;
-            grid-template-columns: repeat(2, 1fr);
-        }
+    <input type="text" id="newTask" placeholder="Add a new task">
+    <button onclick="addTask()">Add Task</button>
 
-        .task-container {
-            display: grid;
-            width: 100%;
-            grid-template-columns: 1fr;
-            gap: 10px;
-        }
+    <script>let tasks = [];
 
-        input {
-            width: calc(100% - 20px);
-            padding: 8px;
-            border: 1px solid darkgray;
-            border-radius: 5px;
-            transition: border-color 0.5s, background-color 0.5s;
-        }
+        function addTask() {
+            const newTaskInput = document.getElementById('newTask');
+            const taskText = newTaskInput.value.trim();
 
-        input:hover {
-            border-color: #3498db;
-        }
+            if (taskText !== '') {
+                const task = {
+                    id: Date.now(),
+                    text: taskText,
+                    completed: false
+                };
 
-        .btn {
-            line-height: 20px;
-            height: 20px;
-            text-align: center;
-            width: 100px;
-            cursor: pointer;
-            position: relative;
-        }
+                tasks.push(task);
+                newTaskInput.value = ''; // Clear the input field
 
-        .btn span {
-            z-index: 2;
-            display: block;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-        }
-
-        .btn::before,
-        .btn::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-            transition: all 0.5s;
-            border: 1px solid rgba(255,255,255,0.2);
-            background-color: rgba(0, 0, 0,0.1);
-        }
-
-        .btn::before {
-            transform: rotate(180deg);
-        }
-
-        .btn::after {
-            transform: rotate(180deg);
-        }
-
-        .btn:hover::before,
-        .btn:hover::after {
-            transform: rotate(0deg);
-            background-color: rgba(255,255,255,0);
-        }
-
-        .task-list {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        .task-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            border-bottom: 1px solid #ccc;
-        }
-
-        .task-item span {
-            margin-right: 10px;
-        }
-    </style></head>
-<body><div class="container"><h1>TODO LIST</h1>
-        <div class="layout"><div class="task-container" style="border-right: 1px solid darkgray;"><h2>Nya Uppgifter</h2>
-                <input type="text" id="newTaskInput" placeholder="Lägg till ny uppgift">
-                <div class="btn" onclick="addTask()"><span>Lägg till</span></div>
-                <ul class="task-list" id="newTaskList"></ul></div>
-            <div class="task-container"><h2>Färdiga Uppgifter</h2>
-                <ul class="task-list" id="completedTaskList"></ul></div></div></div>
-
-    <script>function addTask() {
-            const newTaskInput = document.getElementById("newTaskInput");
-            const newTaskList = document.getElementById("newTaskList");
-
-            if (newTaskInput.value.trim() !== "") {
-                const taskItem = document.createElement("li");
-                taskItem.className = "task-item";
-                taskItem.innerHTML = `
-                    <span>${newTaskInput.value}</span>
-                    <div class="btn" onclick="completeTask(this)"><span>Markera som klar</span></div>
-                `;
-                newTaskList.appendChild(taskItem);
-                newTaskInput.value = "";
+                renderTasks();
             }
         }
 
-        function completeTask(button) {
-            const completedTaskList = document.getElementById("completedTaskList");
-            const taskItem = button.parentNode;
-            taskItem.removeChild(button); // Remove the "Markera som klar" button
-            completedTaskList.appendChild(taskItem);
+        function toggleTaskCompletion(taskId) {
+            const task = tasks.find(task => task.id === taskId);
+            if (task) {
+                task.completed = !task.completed;
+                renderTasks();
+            }
         }
+
+        function removeCompletedTasks() {
+            tasks = tasks.filter(task => !task.completed);
+            renderTasks();
+        }
+
+        function renderTasks() {
+            const taskList = document.getElementById('taskList');
+            taskList.innerHTML = '';
+
+            tasks.forEach(task => {
+                const listItem = document.createElement('li');
+                listItem.innerHTML = `
+                    <input type="checkbox" ${task.completed ? 'checked' : ''} 
+                        onchange="toggleTaskCompletion(${task.id})">
+                    ${task.text}
+                `;
+
+                taskList.appendChild(listItem);
+            });
+
+            const removeCompletedButton = document.createElement('button');
+            removeCompletedButton.textContent = 'Remove Completed Tasks';
+            removeCompletedButton.onclick = removeCompletedTasks;
+            taskList.appendChild(removeCompletedButton);
+        }
+
+        // Initial rendering
+        renderTasks();
     </script></body></html>
 
 
-		<script type="module" data-sveltekit-hydrate="pi6apj">
-			import { start } from "./_app/immutable/start-523bd60f.js";
+			
+			<script>
+				{
+					__sveltekit_uig6e5 = {
+						base: new URL(".", location).pathname.slice(0, -1),
+						env: {}
+					};
 
-			start({
-				env: {},
-				paths: {"base":"","assets":""},
-				target: document.querySelector('[data-sveltekit-hydrate="pi6apj"]').parentNode,
-				version: "1702457089443",
-				hydrate: {
-					node_ids: [0, 17],
-					data: [null,null],
-					form: null
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("./_app/immutable/entry/start.b242c843.js"),
+						import("./_app/immutable/entry/app.3267c43d.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 22],
+							data,
+							form: null,
+							error: null
+						});
+					});
 				}
-			});
-		</script>
-	</div>
+			</script>
+		</div>
 	</body>
 </html>

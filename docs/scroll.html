@@ -4,23 +4,24 @@
 		<meta charset="utf-8" />
 		<link rel="icon" href="./favicon.png" />
 		<meta name="viewport" content="width=device-width" />
-		<meta http-equiv="content-security-policy" content="">
-		<link href="./_app/immutable/assets/_page-1258dfd5.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/start-523bd60f.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index-7441187f.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-1fab6688.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index-018f3826.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/preload-helper-41c905a7.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/control-f5b05b5f.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/parse-f0c618df.js">
-		<link rel="modulepreload" href="./_app/immutable/components/pages/_layout.svelte-d5b30b99.js">
-		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.js-9cbb603b.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-da46b06b.js">
-		<link rel="modulepreload" href="./_app/immutable/components/pages/scroll/_page.svelte-5327634d.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index-a9b93569.js">
+		
+		<link href="./_app/immutable/assets/app.e661baf9.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/17.1258dfd5.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.b242c843.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.d01e145f.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.9cc3ac79.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.1e9b6a47.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/parse.bee59afc.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/control.c2cf8273.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.3267c43d.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/preload-helper.a4192956.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.783b041a.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/17.dcd5ba76.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.1242e49a.js">
 	</head>
-	<body>
+	<body data-theme="skeleton">
 		<div style="display: contents">
+
 
 
 <nav><a href="/">Hem</a>
@@ -29,6 +30,15 @@
   <a href="/photoapp">Photo App</a>
   <a href="/register">register</a>
   <a href="/todo">To Do</a>
+  <a href="/pacman">Pac Man</a>
+  <a href="/chat">Chat App</a>
+  <a href="/search">search</a>
+  <a href="/scroll">scroll</a>
+  <a href="/blog">blog</a>
+  <a href="/week 1">week1</a>
+  <a href="/logoin">logoin</a>
+  <a href="/Gim">gim</a>
+  <a href="/webshop">webshop</a>
 
   <a target="_blank" rel="noreferrer" href="https://github.com/lisaviktorsson/lisaviktorsson.github.com">GitHub</a></nav>
 
@@ -37,29 +47,39 @@
 
   
   <main class="svelte-1fk8y27">
-    <div class="container svelte-1fk8y27"><img style="transform: translate(0, 0px)" src="https://www.devsamples.com/parallax-layer0.png" alt="parallax layer 0" class="svelte-1fk8y27"><img style="transform: translate(0, 0px)" src="https://www.devsamples.com/parallax-layer1.png" alt="parallax layer 1" class="svelte-1fk8y27"><img style="transform: translate(0, 0px)" src="https://www.devsamples.com/parallax-layer2.png" alt="parallax layer 2" class="svelte-1fk8y27"><img style="transform: translate(0, 0px)" src="https://www.devsamples.com/parallax-layer3.png" alt="parallax layer 3" class="svelte-1fk8y27"></div>
+    <div class="container svelte-1fk8y27"><img style="transform: translate(0, 0px)" src="/image0.png" alt="parallax layer 0" class="svelte-1fk8y27"><img style="transform: translate(0, 0px)" src="/image2.png" alt="parallax layer 2" class="svelte-1fk8y27"><img style="transform: translate(0, 0px)" src="/image6.png" alt="parallax layer 6" class="svelte-1fk8y27"></div>
   
     
     <div class="text svelte-1fk8y27"><p>You have scrolled 0 pixels</p>
-          <p>Keep scrolling...</p></div>
+          <p>DO NOT SCROLL</p></div>
   </main>
 
 
-		<script type="module" data-sveltekit-hydrate="w2v7di">
-			import { start } from "./_app/immutable/start-523bd60f.js";
+			
+			<script>
+				{
+					__sveltekit_uig6e5 = {
+						base: new URL(".", location).pathname.slice(0, -1),
+						env: {}
+					};
 
-			start({
-				env: {},
-				paths: {"base":"","assets":""},
-				target: document.querySelector('[data-sveltekit-hydrate="w2v7di"]').parentNode,
-				version: "1702457089443",
-				hydrate: {
-					node_ids: [0, 13],
-					data: [null,null],
-					form: null
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("./_app/immutable/entry/start.b242c843.js"),
+						import("./_app/immutable/entry/app.3267c43d.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 17],
+							data,
+							form: null,
+							error: null
+						});
+					});
 				}
-			});
-		</script>
-	</div>
+			</script>
+		</div>
 	</body>
 </html>

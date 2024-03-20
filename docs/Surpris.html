@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="./favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		
+		<link href="./_app/immutable/assets/app.e661baf9.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.b242c843.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.d01e145f.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.9cc3ac79.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.1e9b6a47.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/parse.bee59afc.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/control.c2cf8273.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.3267c43d.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/preload-helper.a4192956.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.783b041a.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/20.aae7c4c4.js">
+	</head>
+	<body data-theme="skeleton">
+		<div style="display: contents">
+
+
+
+<nav><a href="/">Hem</a>
+  <a href="/memory">Memory</a>
+  <a href="/telltale">Telltale</a>
+  <a href="/photoapp">Photo App</a>
+  <a href="/register">register</a>
+  <a href="/todo">To Do</a>
+  <a href="/pacman">Pac Man</a>
+  <a href="/chat">Chat App</a>
+  <a href="/search">search</a>
+  <a href="/scroll">scroll</a>
+  <a href="/blog">blog</a>
+  <a href="/week 1">week1</a>
+  <a href="/logoin">logoin</a>
+  <a href="/Gim">gim</a>
+  <a href="/webshop">webshop</a>
+
+  <a target="_blank" rel="noreferrer" href="https://github.com/lisaviktorsson/lisaviktorsson.github.com">GitHub</a></nav>
+
+<hr>
+
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In the Forest</title>
+    <style>body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #2a2a2a;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        #forest-container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 2px solid #4caf50;
+            border-radius: 10px;
+            background-color: #333;
+        }
+
+        #forest-image {
+            max-width: 100%;
+            border-radius: 50px;
+            margin-bottom: 50px;
+            display: none;
+        }
+
+        #dialogue {
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+    </style></head>
+<body><div id="forest-container"><h1>Lost in the Forest</h1>
+    <img id="forest-image" src="thend.gif" alt="Forest Image">
+    <div id="dialogue">You find yourself deep in a mysterious forest. What will you do?</div>
+    <button onclick="rest()">Rest</button></div>
+
+<script>let dialogueElement = document.getElementById('dialogue');
+    let forestImage = document.getElementById('forest-image');
+
+    function rest() {
+        showDialogue("You choose to rest in a tranquil spot within the forest. The sounds of nature surround you. The end.");
+        showImage();
+    }
+
+    function showDialogue(text) {
+        dialogueElement.innerHTML = text;
+    }
+
+    function showImage() {
+        forestImage.style.display = 'block';
+    }
+</script></body></html>
+
+
+			
+			<script>
+				{
+					__sveltekit_uig6e5 = {
+						base: new URL(".", location).pathname.slice(0, -1),
+						env: {}
+					};
+
+					const element = document.currentScript.parentElement;
+
+					const data = [null,null];
+
+					Promise.all([
+						import("./_app/immutable/entry/start.b242c843.js"),
+						import("./_app/immutable/entry/app.3267c43d.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 20],
+							data,
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

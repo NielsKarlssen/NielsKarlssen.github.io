@@ -1,0 +1,27 @@
+---
+title: Ny Vecka
+date: "2024-02-02"
+keywords: ["planning"]
+---
+**Webshop**
+
+Jag har gjort en Webshop
+
+<button>.</button>
+<script>
+  import { CodeBlock } from '@skeletonlabs/skeleton';
+  </script>
+  
+  <div style=" margin:auto; width:70vw;">
+  <CodeBlock language="html" code={` let cart = [];
+            function addToCart(productName, price, image) {
+            const existingProductIndex = cart.findIndex(item => item.name === productName);
+            if (existingProductIndex !== -1) {
+                cart[existingProductIndex].quantity += 1;
+            } else {
+                cart.push({ name: productName, price: price, image: image, quantity: 1 });
+            }
+            updateCart();
+        }`}><p>
+  </CodeBlock>
+  </div>

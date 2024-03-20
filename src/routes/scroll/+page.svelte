@@ -2,15 +2,15 @@
     import { fade, fly } from 'svelte/transition';
   
     // Define parallax layers
-    const layers = [0, 1, 2, 3];
+    const layers = [0, 2, 6];
   
     // Define messages for scrollytelling
     const messages = [
-      'Keep scrolling...',
-      'More scrolling...',
-      'Almost there...',
-      'You did it!',
-      'You are done!'
+      'DO NOT SCROLL',
+      'I SAID DONT SCROLL',
+      'I WILL SCARE YOU',
+      'Just kidding, tihi',
+      'Thats epic dude! bro, 99'
     ];
   
     // Initialize scroll position, message index, and fader
@@ -41,7 +41,7 @@
       {#each layers as layer}
         <img
           style="transform: translate(0, {y < 2 ? y * layer : -y * layer / (layers.length - 1)}px)"
-          src={`https://www.devsamples.com/parallax-layer${layer}.png`}
+          src={`/image${layer}.png`}
           alt={`parallax layer ${layer}`}
         >
       {/each}
@@ -54,7 +54,7 @@
             <div class="story" in:fly={{ y: 200, duration: 2000 }} out:fade>
                 <p>You have scrolled {y} pixels</p>
                 <p>{currentMessage}</p>
-                <img src="https://www.onlygfx.com/wp-content/uploads/2021/02/6-pixel-heart-1.png" alt="heart"> 
+                <img src="jumpscare.jpg" alt="jumpscare.jpg"> 
             </div>
           {:else if currentMessageIndex === 0 }
           <p>You have scrolled {y} pixels</p>

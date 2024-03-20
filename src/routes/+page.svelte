@@ -1,3 +1,14 @@
+<script>
+  import { CodeBlock } from '@skeletonlabs/skeleton';
+  </script>
+  
+  <div style=" margin:auto; width:70vw;">
+  <CodeBlock language="html" code={`<div>This is meta</div>`}>
+  </CodeBlock>
+  </div>
+
+
+
 <h1 class="hidden">
   Hjälp!
 
