@@ -21,6 +21,7 @@ import "../app.pcss";</script>
   <a href="/logoin">logoin</a>
   <a href="/Gim">gim</a>
   <a href="/webshop">webshop</a>
+  <a href="/website">website</a>
 
   <a target="_blank" rel="noreferrer" href="https://github.com/lisaviktorsson/lisaviktorsson.github.com">GitHub</a>
 </nav>
